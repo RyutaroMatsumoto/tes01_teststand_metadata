@@ -1,0 +1,38 @@
+{
+  "C1--00000": {
+    "overview": {
+      "instrument": "LECROYHDO6104B",
+      "trigger_time": "2025-04-02 02:29:47.116613",
+      "channel": "CHANNEL_1",
+      "coupling": "DC_1MOhm",
+      "sweep": "single_sweep",
+      "samples": 50000002
+    },
+    "time_resolution": {
+      "dt": 1.999999943436137e-09,
+      "t_offset": -0.050000001298388,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 3.699099977438891e-07,
+      "v_offset": -0.0,
+      "total_bits": 12,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "1_mV/div",
+      "time_base": "10_ms/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": 0.0,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  }
+}
