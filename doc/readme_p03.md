@@ -1,52 +1,68 @@
-## <img src="./../logo/utokyo_logo.png" alt="logo" width="50"/> Teststand overview 
-This is an overview of the  TES `tes01` measurements. <br>
-`tes01` measurement is with a novel readout system, `SQUID(PNR) + HBT(Timing)`.<br>
-For more details on the individuals runs, see the readme files in this directory. 
-
-The follow the following naming scheme: `readme_<period>_<runs>.md`.  
+## <img src="./../logo/utokyo_logo.png" alt="logo" width="30"/> Teststand data 
 
 <style>
 @media (prefers-color-scheme: dark) {
   .logo-inline {
-    content: url("./../logo/lbnl_logo_dark.png");
+    content: url("./../logo/utokyo_logo.png");
   }
 }
 </style>
 
-## Overview table: period 1 `p01`: CMTLF1S + Oscilloscope /Noise measurement
-All runs in this period are taken with the **CMTLF1S** at room temperature for noise measurent.<br>
-Used Oscilloscope as Spectrum Analyzer was not reliable.<br>
-No special cover or termination introduced.<br>
+## General measurement information
+| | |
+|:----------------| :----------------|
+| Setup name | `tes01`|
+| period | 3 | 
+| run | 1-14 | 
+| Location | UTokyo, building 9,  room 9-210 |
+| Date of measurement (yyyy-mm-dd) | 2025-04-11 | 
+| Operators | Yuki Mitsuya, Ryutaro Matsumoto | 
+| Goal of measurement | Readout of TES Signal with SQUID and HBT amps |
+| | |
 
-|                   |                 |            |            |                                   |
-| :---------------- | :-------------- | :--------- | :--------- | :----------------------------------------------------------------------------------------------------------- |
-| **runs**          | **# waveforms** | **Amp connection** | **Termination** | **short description**                                                                                        |
-| `r004`            | 500           | yes | no  | Noise measurement for high frequency                        |
-| `r005`            | 500           | yes | no  | Noise measurement for low frequency                         |
-| `r006`            | 100           | no  | -- | Scope noise for low frequency                               |
-| `r007`            | 100           | no  | -- | Scope only noise High frequency    |
-|                   |                 |            |            |                       |
+## Experimental setup description
+Used 100mK for TES. HBT amps were set in 3K chamber and touched tight to the Cu for thermal release.<br>
+Long Ni-Ti cabling deployed between TES and HBT amps, also tightly fixed on the 3K stage with Cu boards.<br>
+Wave length of the light source was `1547nm`. With Variable Optical Attenuator, ranging from 0dB to -45dB, number of photons was controlled.  
+Attenuator was introduces from r`004` right next to the pulser.
 
+## TES detector
+Not connected
+| | |
+|:----------------| :----------------|
+| Type | TES | 
+| Name | NA | 
+| Operation Current | NA | 
+| | |
+## Pulser
+| | |
+|:----------------| :----------------|
+| Type | Pulser | 
+| Name | FastEdge | 
+| Rise time | `32` ps | 
+| Fall time | ---- |
+| Freqency | `1` kHz|
+| Amplitude(raw) | ~`350` mV|
+| Amplitude (w/ Attenuator) | ~`4`mV|
+|||
+Attenuator was hand-made π-type attenuator
+## Electronics
+| ||||
+|:----------------| :----------------| :----| :----|
+|Name| Vd(V) |Id(A)| datasheet Gain(Roomtemp, ~1GHz) |
+|CMTLF1S|`3.0`| `0.01`| `20` dB | 
+|AE-ADL | `5.0` |`0.079`| --- |
+|||||
 
+## DAQ
+Oscilloscope LECROYHDO6104B.
+detail data is in: ./../hardware/scope/p02
 
-## Overview table: period 2 `p02`: Pulser + CMTLF1S + AE-ADL +Oscilloscope/Gain measurement
-All runs in this period are taken with the **FastEdge** pulser(Rise-time of 32ps) and **CMTLF1S + AE-ADL** SiGe HBT amplifiers.<br> 
-All measuments are done under room temperature.<br> 
-|          |                 |              |                       |     |
-| :------- | :-------------- | :----------- | :-------------------- | :---|
-| **runs** | **# waveforms** | **Attenuator** | **CMTLF1S** | **AE-ADL**|
-| `r001`   | 1,000           | no             | `3.0`V      | `0`V      |
-| `r002`   | 1,000           | no             | `3.0`V      | `5.0`V    |
-| `r003`   | 1,000           | no             | `3.0`V      | NC        |
-| `r004`   | 1,000           | yes            | `3.0`V      | NC        |
-| `r005`   | 1,000           | yes            | `3.0`V      | `5.0`V    |
-
-
-## Overview table: period 3 `p03`: TES(w/ SQUID) + CMTLF1S + AE-ADL/Actual read out test 
+## Runs
 All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amplified by the **CMTLF1S + AE-ADL** SiGe HBTs (same as `p02`) and **NAMEOFAMP**(3rd Amp at room temperture).
 |          |                 |            |              |           |            |                          |
 | :------- | :-------------- | :--------- | :---------   |:--------- | :--------- |:----------------------   |
-| **runs** | **# waveforms** | **VOA**    | **HBT_Amps** |**I_bias** |**GBW**     |**short description**     |
+| **runs** | **waveforms** | **VOA**    | **HBT_Amps** |**I_bias** |**GBW**     |**short description**     |
 |`r001`    |`10000`          |`-45dB`     | OFF          |`45µA`     | `7.2GHz`   | SQUID only Measurement for PNR calibration(light ON = signal)     from exp1 signal                    |
 |`r002`    |`3000`           |`-45dB`     | OFF          |`45µA`     | `7.2GHz`   | SQUID only Measurement for PNR calibration(light OFF = noise)      from exp1 noise                   |
 |`r003`    |`10000`          |`-45dB`     | ON           |`45µA`     | `7.2GHz`   |  Read out from both lines. 2 photons input      from exp2 signal                   |
@@ -61,3 +77,7 @@ All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amp
 |`r012`    |`5000`           |`-40dB`      | ON           |`35µA`     | `1.0GHz` ? | Read out from both lines. With the minimum light strength HBT signal visible.     from exp8-2                   |
 |`r013`    |`10000`          |`-40dB`     | OFF          |`35µA`     | `1.0GHz`   | SQUID only Measurement for PNR calibration(light ON = signal)     from exp8 squid signal                    |
 |`r014`    |`3000`           |`-40dB`     | OFF          |`35µA`     | `1.0GHz`   | SQUID only Measurement for PNR calibration(light OFF = noise)      from exp8 squid noise                   |
+NC = Not Connected.
+## Remarks and comments
+r012 rise time constant of HBT signal(averaged) is around 15ns, which is clearly slower than initial bias point(r006, etc)
+

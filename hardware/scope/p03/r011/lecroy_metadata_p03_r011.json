@@ -1,0 +1,110 @@
+{
+  "C1--00000": {
+    "overview": {
+      "instrument": "LECROYWaveRunner",
+      "trigger_time": "2025-04-11 05:21:15.901559",
+      "channel": "CHANNEL_1",
+      "coupling": "AC,_1MOhm",
+      "sweep": "single_sweep",
+      "samples": 10002
+    },
+    "time_resolution": {
+      "dt": 5.00000006675716e-11,
+      "t_offset": -2.0005503455828813e-08,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 2.5944800654542632e-05,
+      "v_offset": 0.6000000238418579,
+      "total_bits": 8,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "200_mV/div",
+      "time_base": "50_ns/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": 0.6000000238418579,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  },
+  "C2--00000": {
+    "overview": {
+      "instrument": "LECROYWaveRunner",
+      "trigger_time": "2025-04-11 05:21:15.901559",
+      "channel": "CHANNEL_2",
+      "coupling": "AC,_1MOhm",
+      "sweep": "single_sweep",
+      "samples": 10002
+    },
+    "time_resolution": {
+      "dt": 5.00000006675716e-11,
+      "t_offset": -2.003550345582881e-08,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 6.486199708888307e-05,
+      "v_offset": -0.7099999785423279,
+      "total_bits": 8,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "500_mV/div",
+      "time_base": "50_ns/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": -0.7099999785423279,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  },
+  "C4--00000": {
+    "overview": {
+      "instrument": "LECROYWaveRunner",
+      "trigger_time": "2025-04-11 05:21:15.901559",
+      "channel": "CHANNEL_4",
+      "coupling": "AC,_1MOhm",
+      "sweep": "single_sweep",
+      "samples": 10002
+    },
+    "time_resolution": {
+      "dt": 5.00000006675716e-11,
+      "t_offset": -2.002150345582881e-08,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 0.00012972399417776614,
+      "v_offset": -0.0,
+      "total_bits": 8,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "1_V/div",
+      "time_base": "50_ns/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": 0.0,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  }
+}
