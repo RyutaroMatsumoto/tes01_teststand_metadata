@@ -24,35 +24,31 @@
 Used 100mK for TES. HBT amps were set in 3K chamber and touched tight to the Cu for thermal release.<br>
 Long Ni-Ti cabling deployed between TES and HBT amps, also tightly fixed on the 3K stage with Cu boards.<br>
 Wave length of the light source was `1547nm`. With Variable Optical Attenuator, ranging from 0dB to -45dB, number of photons was controlled.  
-Attenuator was introduces from r`004` right next to the pulser.
 
 ## TES detector
 Not connected
 | | |
 |:----------------| :----------------|
-| Type | TES | 
+| Type | Ir TES | 
 | Name | NA | 
-| Operation Current | NA | 
+| Bias Current(Ib) | `45`µA | 
 | | |
-## Pulser
+## SQUID
 | | |
 |:----------------| :----------------|
-| Type | Pulser | 
-| Name | FastEdge | 
-| Rise time | `32` ps | 
-| Fall time | ---- |
-| Freqency | `1` kHz|
-| Amplitude(raw) | ~`350` mV|
-| Amplitude (w/ Attenuator) | ~`4`mV|
-|||
-Attenuator was hand-made π-type attenuator
+| Name | F39 A or B | 
+| Ib | `10.364`µA | 
+| Vb | `169.4`µV | 
+| Phib | `15.93`µA | 
+| | |
 ## Electronics
-| ||||
-|:----------------| :----------------| :----| :----|
-|Name| Vd(V) |Id(A)| datasheet Gain(Roomtemp, ~1GHz) |
-|CMTLF1S|`3.0`| `0.01`| `20` dB | 
-|AE-ADL | `5.0` |`0.079`| --- |
-|||||
+| |||||
+|:----------------| :----------------| :----| :----| :----|
+|Name| Vd(V) |Id(A)| datasheet Gain(Roomtemp) | Band Width| 
+|CMTLF1S|`3.0`| `0.01`| `20` dB(@1GHz) |`1MHz-10GHz` |
+|AE-ADL | `5.0` |`0.079`| `15~18`dB |`20MHz-1GHz`  |
+|Room temp amp | `15.0` | `0.128` |`40`dB|`1kHz-2GHz` |
+||||||
 
 ## DAQ
 Oscilloscope LECROYHDO6104B.
@@ -62,11 +58,11 @@ detail data is in: ./../hardware/scope/p02
 All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amplified by the **CMTLF1S + AE-ADL** SiGe HBTs (same as `p02`) and **NAMEOFAMP**(3rd Amp at room temperture).
 |          |                 |            |              |           |            |                          |
 | :------- | :-------------- | :--------- | :---------   |:--------- | :--------- |:----------------------   |
-| **runs** | **waveforms** | **VOA**    | **HBT_Amps** |**I_bias** |**GBW**     |**short description**     |
+| **runs** | **waveforms** | **OAT**    | **HBT_Amps** |**I_bias** |**GBW**     |**short description**     |
 |`r001`    |`10000`          |`-45dB`     | OFF          |`45µA`     | `7.2GHz`   | SQUID only Measurement for PNR calibration(light ON = signal)     from exp1 signal                    |
 |`r002`    |`3000`           |`-45dB`     | OFF          |`45µA`     | `7.2GHz`   | SQUID only Measurement for PNR calibration(light OFF = noise)      from exp1 noise                   |
 |`r003`    |`10000`          |`-45dB`     | ON           |`45µA`     | `7.2GHz`   |  Read out from both lines. 2 photons input      from exp2 signal                   |
-|`r004`    |`3000`           |`-45dB`     | ON           |`45µA`     | `7.2GHz`   | SQUID only Measurement for PNR calibration(light OFF = noise) with Amps ON      from exp2 noise                   |
+|`r004`    |`3000`           |`-45dB`     | ON           |`45µA`     | `7.2GHz`   | Noise Measurement(light OFF = noise) with Amps ON      from exp2 noise                   |
 |`r005`    |`5000`           |`0dB`       | ON           |`45µA`     | `1.0GHz` ? | Read out from both lines. Maximum strength light source     from exp3                    |
 |`r006`    |`700`           |`-40dB`     | ON           |`45µA`     | `1.0GHz` ? | Read out from both lines. In serch of minimum strength light source detected via HBT    from exp4                    |
 |`r007`    |`0`           |`-35dB`     | ON           |`45µA`     | `1.0GHz` ? | Read out from both lines. With the light strength at which TES signal from SQUID saturated.      from exp5                    |
@@ -79,5 +75,7 @@ All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amp
 |`r014`    |`3000`           |`-40dB`     | OFF          |`35µA`     | `1.0GHz`   | SQUID only Measurement for PNR calibration(light OFF = noise)      from exp8 squid noise                   |
 NC = Not Connected.
 ## Remarks and comments
-r012 rise time constant of HBT signal(averaged) is around 15ns, which is clearly slower than initial bias point(r006, etc)
+r012 rise time constant of HBT signal(averaged) is around 15ns, which is clearly slower than initial bias point(r006, etc)<br>
+comparing r003 and r004, there seems no difference in HBT output, suggesting that readout is something different?
+Turned out later, single photon V shift would be 10mV, where we had assumed it to be around 20mV.
 

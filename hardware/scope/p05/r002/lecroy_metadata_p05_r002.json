@@ -1,0 +1,110 @@
+{
+  "C1--00000": {
+    "overview": {
+      "instrument": "LECROYWaveRunner",
+      "trigger_time": "2025-05-16 07:49:05.143600",
+      "channel": "CHANNEL_1",
+      "coupling": "AC,_1MOhm",
+      "sweep": "single_sweep",
+      "samples": 100002
+    },
+    "time_resolution": {
+      "dt": 4.999999858590343e-10,
+      "t_offset": -5.000232698595521e-06,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 1.2972400327271316e-05,
+      "v_offset": 0.30399999022483826,
+      "total_bits": 8,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "100_mV/div",
+      "time_base": "5_us/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": 0.30399999022483826,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  },
+  "C2--00000": {
+    "overview": {
+      "instrument": "LECROYWaveRunner",
+      "trigger_time": "2025-05-16 07:49:05.143600",
+      "channel": "CHANNEL_2",
+      "coupling": "DC_50_Ohms",
+      "sweep": "single_sweep",
+      "samples": 100002
+    },
+    "time_resolution": {
+      "dt": 4.999999858590343e-10,
+      "t_offset": -5.000265698595521e-06,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 2.7462399884825572e-05,
+      "v_offset": -0.0,
+      "total_bits": 8,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "200_mV/div",
+      "time_base": "5_us/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": 0.0,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  },
+  "C4--00000": {
+    "overview": {
+      "instrument": "LECROYWaveRunner",
+      "trigger_time": "2025-05-16 07:49:05.143600",
+      "channel": "CHANNEL_4",
+      "coupling": "AC,_1MOhm",
+      "sweep": "single_sweep",
+      "samples": 100002
+    },
+    "time_resolution": {
+      "dt": 4.999999858590343e-10,
+      "t_offset": -5.000027698595521e-06,
+      "t_uncertainty": 9.999999960041972e-13,
+      "sparsing_factor": 1,
+      "t_unit": "S"
+    },
+    "wave_resolution": {
+      "v_over_bit": 0.00012972399417776614,
+      "v_offset": -0.0,
+      "total_bits": 8,
+      "comm_type": 1,
+      "sweeps_per_acq": 1,
+      "v_unit": "V"
+    },
+    "GUI": {
+      "fixed_vertical_gain": "1_V/div",
+      "time_base": "5_us/div",
+      "bandwidth_limit": "off",
+      "acq_vert_offset": 0.0,
+      "probe_att": 1.0
+    },
+    "other_information": {
+      "acq_duration": 0.0,
+      "vertical_vernier": 1.0
+    }
+  }
+}
