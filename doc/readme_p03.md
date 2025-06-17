@@ -52,7 +52,7 @@ Not connected
 
 ## DAQ
 Oscilloscope LECROYHDO6104B.
-detail data is in: ./../hardware/scope/p02
+detail data is in: ./../hardware/scope/p03
 
 ## Runs
 All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amplified by the **CMTLF1S + AE-ADL** SiGe HBTs (same as `p02`) and **NAMEOFAMP**(3rd Amp at room temperture).

@@ -32,7 +32,7 @@ Not connected
 | Type | Ir TES | 
 | Name | NA | 
 | Bias Current(Ib) | `33`µA | 
-| FLL Resistance(Rf) | `23.1`Ω |
+| FLL Resistance(Rf) | `23.1`kΩ |
 | ~~~(GBW) | `1.04`GHz |
 | | |
 ## SQUID
@@ -48,14 +48,13 @@ Not connected
 |:----------------| :----------------| :----| :----| :----|
 |Name| Vd(V) |Id(A)| datasheet Gain(Roomtemp) | Band Width| 
 |CMTLF1S|`3.0`| `0.01`| `20` dB(@1GHz) |`1MHz-10GHz` |
-|AE-ADL | `5.0` |`0.079`| `15~18`dB |`20MHz-1GHz`  |
 |Room temp amp | `15.0` | `0.128` |`40`dB|`1kHz-2GHz` |
 ||||||
 
 
 ## DAQ
 Oscilloscope LECROYHDO6104B.
-detail data is in: ./../hardware/scope/p02
+detail data is in: ./../hardware/scope/p04
 
 ## Runs
 All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amplified by the **CMTLF1S + AE-ADL** SiGe HBTs (same as `p02`) and **NAMEOFAMP**(3rd Amp at room temperture).
