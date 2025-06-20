@@ -70,11 +70,13 @@ All runs in this period are taken with voltage signal from **TES(w/ SQUID)** amp
 
 NC = Not Connected.
 ## Remarks and comments
-During noise measurement, we observed some dark counts(unstable superconducting state) with lower Ib(TES). To address this, we set Rf@FLL lower than usual:(=23.1Ω)
+During noise measurement, we observed some dark counts(unstable superconducting state) with lower Ib(TES). To address this, we set Rf@FLL lower than usual:(=23.1kΩ)
 Tried several connection paterns making sure connectings were correct, but still not be able to catch the signal. Connections were confirmed later w/ room temp experiments.<br>
 We assumed without 2nd amplifier, we couldn't get enough S/N ratio. (2nd amp has 15-18dB 20MHz - 1GHz) <br>
 
 Good point is that we succeeded to eliminate switching noise by either of solutions: <br>
-1. adding noise-cut trans pulser DC source <br>
-2. re-wired SMA-TES on board cable which potencially had been touching GND and Signal lines.
+1. adding noise-cut trans to the pulser DC source <br>
+2. re-wired SMA-TES on board cable which potencially had been touching GND and Signal lines. -> in the following experiments we again got the switching noise using this wire connection, thus this doesn't matter to that noise.
 
+Looking on the signal and noise amplitude from semiconductor amp and SQUID, each of them are extraordinary smaller than the same measurement setup (p06). signal amplitude from semiconductor was around 0.2mVpp and noise was around 0.1mVpp while SQUID was 0.14V.(saturation level r005) 
+For the exact same experiment:p06_r010, signal was around 25mVpp and noise was 2mVpp, with switching noise 15mVpp from semiconductor amps, where SQUID was 0.75V.
