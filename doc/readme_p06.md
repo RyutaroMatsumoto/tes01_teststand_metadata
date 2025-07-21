@@ -31,7 +31,7 @@ Not connected
 |:----------------| :----------------|
 | Type | Ir TES | 
 | Name | NA | 
-| Bias Current(Ib) | ``µA | 
+| Bias Current(Ib) | `~30`µA | 
 | FLL Resistance(Rf) | `100`kΩ |
 | ~~~(GBW) | `0.55`GHz |
 | | |
